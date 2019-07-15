@@ -59,7 +59,8 @@ volumes: [
      			}
      		}
 		}	
-	} catch(exc)
-		error "Pileline Failed"
+	} catch(exc){
+		 currentBuild.result = 'FAILURE'
 		throw(exc)
+	}
 }
