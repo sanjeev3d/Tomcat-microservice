@@ -53,7 +53,7 @@ volumes: [
      		}
      		stage('Docker Push'){
      			container('docker'){
-     				withDockerRegistry(credentialsId: 'docker-hub-cred', url: 'https://hub.docker.com/'){
+     				withDockerRegistry([credentialsId: 'docker-hub-cred', url: ""]){
      					sh "docker push sanjeev3d/tomcat-app:${gitCommit}"
      				}
      			}
