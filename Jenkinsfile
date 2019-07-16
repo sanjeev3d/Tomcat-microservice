@@ -42,7 +42,7 @@ volumes: [
      			try {
      				container('docker'){
      					sh """
- 							docker built -t sanjeev3d/tomcat-app:${gitCommit} .
+ 							docker build -t sanjeev3d/tomcat-app:${gitCommit} .
  							"""
      				}	
      			}
