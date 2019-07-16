@@ -20,7 +20,7 @@ volumes: [
 			stage('Gradle Test'){
 				try {
 					container('gradle'){
-						sh "/gradle/bin/gradle test"
+						sh "gradle test"
 					}
 				}
 				catch (exc) {
@@ -31,7 +31,7 @@ volumes: [
      		stage('Gradle Build'){
      			try {
      			container('gradle'){
-     				sh "/gradle/bin/gradle build"
+     				sh "gradle build"
      			}
      		} catch( exc ) {
      				error "Gradle Build Failed"
