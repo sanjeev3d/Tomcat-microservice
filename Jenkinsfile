@@ -62,5 +62,7 @@ volumes: [
 	} catch(exc){
 		 currentBuild.result = 'FAILURE'
 		throw(exc)
+	} finally {
+		notifyBuild(currentBuild.result)
 	}
 }
