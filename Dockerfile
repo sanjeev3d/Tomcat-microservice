@@ -3,7 +3,7 @@ FROM tomcat:8.0-alpine
 LABEL maintainer="me.sanjeev3d@gmail.com"
 
 ADD sample.war /usr/local/tomcat/webapps/
-
+#expose port for web server
 EXPOSE 8080
 
 CMD ["catalina.sh", "run"]
